@@ -11,9 +11,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import { CLIENT_ID, USERS } from "../../constants/constants";
 import { IAuth, IPost, IPostClient, IUserInfo } from "../../types";
 
-// import "./index.scss";
 import PostItem from "../../components/PostItem";
-import Button from "../../components/Button";
 import { useNavigate, useParams } from "react-router-dom";
 import jwt_decode from "jwt-decode";
 import { useCookies } from "react-cookie";
