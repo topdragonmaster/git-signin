@@ -88,7 +88,7 @@ const Home: React.FC = () => {
   };
 
   const handleChecked = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const { checked, name } = e.target;
+    const { checked } = e.target;
     setPost((prev) => ({ ...prev, isPrivate: checked }));
   };
 
@@ -118,7 +118,6 @@ const Home: React.FC = () => {
     }
   };
 
-  console.log(posts)
   return (
     <div className="container">
       <header className="container__header">
