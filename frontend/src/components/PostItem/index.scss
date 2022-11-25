@@ -1,0 +1,114 @@
+
+
+.post {
+  position: relative;
+  display: block !important;
+
+  margin-left: 16px;
+  padding-left: 50px;
+  &_owner {
+    left: -10px;
+    position: absolute;
+    z-index: 1;
+    width: 45px;
+    height: 45px;
+    display: block !important;
+    img {
+      border-radius: 50% !important;
+      width: 100%;
+      height: 100%;
+      border-style: none;
+    }   
+  }
+
+  &_content {
+    position: relative;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;   
+    &::before {
+      position: absolute;
+      display: block;
+      top: 11px;
+      right: 100%;
+      left: -8px;
+      width: 8px;
+      height: 16px;
+      pointer-events: none;
+      content: " ";
+      clip-path: polygon(0 50%, 100% 0, 100% 100%);
+      background-color: #d0d7de;
+    } 
+
+    &::after {
+      position: absolute;
+      top: 11px;
+      right: 100%;
+      left: -9px;
+      display: block;
+      width: 8px;
+      height: 16px;
+      pointer-events: none;
+      content: " ";
+      clip-path: polygon(0 50%, 100% 0, 100% 100%);
+      margin-left: 2px;
+      background-color: #d0d7de;
+      background-image: linear-gradient(#f6f8fa, #f6f8fa);
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      padding: 10px;
+      padding-right: 16px;
+      padding-left: 16px;
+      background-color:#f6f8fa;
+      border-bottom: 1px solid #d0d7de;
+      border-top-left-radius: 6px;
+      border-top-right-radius: 6px; 
+      justify-content: space-between;
+      font-weight: 400;
+      span {
+        display: flex;
+        strong {
+          font-size: 20px;
+          font-weight: 600;
+          margin-right: 20px;
+          color: #57606a;
+        }
+        .public {
+          font-size: 14px;
+          color: #218bff;
+        }
+        .private {
+          font-size: 14px;
+          color: #f85858;
+        }
+      }
+
+      &__group {
+        button {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    &__body {
+      width: 100%;
+      padding: 16px;
+      overflow: visible;
+      font-size: 14px;
+      color: #24292f;
+
+      textarea{
+        padding: 10px;
+        background-color:#f6f8fa;
+        border-bottom: 1px solid #d0d7de;
+        border-radius: 6px;
+        height: 100%;
+        width: 100%;
+        padding: 0.5rem;
+        resize: none;
+      }
+    }
+  }
+}
